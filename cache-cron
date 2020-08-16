@@ -1,0 +1,1 @@
+* * * * * /p4/config/cache-clean.sh >> /p4/logs/cron.log 2>&1

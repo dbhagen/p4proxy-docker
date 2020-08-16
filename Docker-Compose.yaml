@@ -1,0 +1,6 @@
+volumes:
+  p4p-cache:
+    name: p4p-cache-volume
+    driver: local
+    driver_opts:
+      o: "size="
