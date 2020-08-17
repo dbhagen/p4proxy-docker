@@ -1,6 +1,6 @@
 {
   "name": "p4proxy-docker",
-  "version": "r19.2",
+  "version": "r19.1",
   "description": "Docker encapsulated p4proxy instance",
   "main": "",
   "author": "Daniel Hagen <daniel.b.hagen@gmail.com>",

@@ -1,5 +1,5 @@
 FROM ubuntu:bionic-20200713
-ARG P4P_VER=r19.2
+ARG P4P_VER=r19.1
 
 # Build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
