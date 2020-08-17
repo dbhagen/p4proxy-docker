@@ -9,10 +9,8 @@
     "build": "docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
     "build:dev": "yarn build && yarn dev",
     "build:start": "yarn build && yarn start",
-    "dev:host": "docker run --rm -it -h $npm_package_name --network host -e P4TARGET -e P4PPORT -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest /bin/bash",
-    "start:host": "docker run --rm -it -h $npm_package_name --network host -e P4TARGET -e P4PPORT -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest",
-    "dev": "docker run --rm -it -h $npm_package_name --network p4p-network -p 1666:1666 -e P4TARGET -e P4PPORT -e P4P_LIMITCACHE=TRUE -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest /bin/bash",
-    "start": "docker run --rm -it -h $npm_package_name --network p4p-network -p 1666:1666 -e P4TARGET -e P4PPORT -e P4P_LIMITCACHE=TRUE -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest",
+    "dev": "docker run --rm -it -h $npm_package_name --network p4p-network -p 1666:1666 -e P4PTARGET -e P4PPORT -e P4P_LIMITCACHE=TRUE -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest /bin/bash",
+    "start": "docker run --rm -it -h $npm_package_name --network p4p-network -p 1666:1666 -e P4PTARGET -e P4PPORT -e P4P_LIMITCACHE=TRUE -v $(pwd)/p4p-config:/p4/config -v $(pwd)/p4p-cache:/p4/cache -v $(pwd)/p4p-logs:/p4/logs -v $(pwd)/p4p-ssl:/p4/ssl --name $npm_package_name $npm_package_name:latest",
     "dev:attach": "docker exec -it $npm_package_name /bin/bash"
   }
 }
