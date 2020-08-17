@@ -1,4 +1,19 @@
 FROM ubuntu:bionic-20200713
+
+# Build-time metadata as defined at http://label-schema.org
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+LABEL org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.name="e.g. Example project name" \
+    org.label-schema.description="Example project description in 300 chars or less" \
+    org.label-schema.url="e.g. https://www.example.com/" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url="e.g. https://github.com/microscaling/microscaling" \
+    org.label-schema.vendor="e.g. ACME Inc" \
+    org.label-schema.version=$VERSION \
+    org.label-schema.schema-version="1.0"
+
 ARG P4P_VER=r20.1
 ENV DEBIAN_FRONTEND=noninteractive \
     P4P_VER=$P4P_VER \
