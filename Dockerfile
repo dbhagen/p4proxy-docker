@@ -1,7 +1,7 @@
 FROM ubuntu:bionic-20200713
 ARG P4P_VER=r20.1
 ENV DEBIAN_FRONTEND=noninteractive \
-    P4P_VER=${P4P_VER} \
+    P4P_VER=$P4P_VER \
     P4P_MAXCACHEAGEDAYS=30 \
     P4P_MAXCACHESIZE=10GB \
     P4USER=p4proxy \
@@ -17,6 +17,7 @@ COPY startscript.sh /startscript.sh
 #COPY cache-clean.sh /cache-clean.sh
 #COPY cache-cron /etc/cron.d/cache-cron
 ADD http://www.perforce.com/downloads/perforce/${P4P_VER:-r20.1}/bin.linux26x86_64/helix-core-server.tgz /tmp/helix-core-server.tgz
+# ADD http://www.perforce.com/downloads/perforce/r19.2/bin.linux26x86_64/helix-core-server.tgz /tmp/helix-core-server.tgz
 RUN mkdir -p /p4/bin && \
     mkdir -p /p4/cache && \
     mkdir -p /p4/logs && \
