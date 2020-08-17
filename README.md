@@ -19,6 +19,20 @@ Ultimately, this container could run without any bound volumes and be purely eph
 
 `/p4/ssl`: Location of `certificate.txt` and `privatekey.txt`. If these files do not exist in this location at boot and `ssl:` has been prepended to the `P4PPORT` variable, a self-signed certificate will be generated and stored here.
 
+## Building:
+
+The `package.json` file contains scripts to build and run the docker image during dev.
+
+`yarn build`: Build the container image, tagged as the `package.json` name attribute, with the default of `p4proxy-docker`, and the `package.json` version number. Example: `p4proxy-docker:1.0.0`
+
+`yarn start`: Run the built container image.
+
+`yarn dev`: Run the built container and jump into a `/bin/bash` shell session
+
+You can build and run or debug the container with the combined scripts, `yarn build:start` and `yarn build:dev`
+
+To build a specific version of P4P (the 2020.1 release has only been tested so far), you can run `yarn build --build-arg P4P_VER=r19.2`
+
 ## Optional variables:
 
 `P4USER`: Perforce user to be used for pre-caching depots <sup>* To be implimented</sup>

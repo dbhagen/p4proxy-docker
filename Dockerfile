@@ -26,15 +26,15 @@ RUN mkdir -p /p4/bin && \
     chown -R root:root /p4/bin/p4* && \
     chmod -R 755 /p4/bin/p4* && \
     rm -rf /tmp/helix-core-server.tgz /tmp/p4p && \
-    apt-get update -q -y && \
-    apt-get install -qq -y \
-    openssl \
-    vim && \
     chmod +x /startscript.sh
 
-# cron \
-# bc \
-# ncdu \
+#    apt-get update -q -y && \
+#    apt-get install -qq -y \
+#    openssl \
+#    cron \
+#    bc \
+#    ncdu \
+#    vim && \
 #    chmod +x /cache-clean.sh && \
 #    chmod 0644 /etc/cron.d/cache-cron && \
 #    crontab /etc/cron.d/cache-cron
