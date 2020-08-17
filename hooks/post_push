@@ -1,3 +1,4 @@
+#!/bin/bash
 export NPM_PACKAGE_NAME=`cat package.json | grep "\"name\"" | cut -d':' -f2 | sed 's/[,|"| ]//g'`
 export NPM_PACKAGE_VERSION=`cat package.json | grep "\"version\"" | cut -d':' -f2 | sed 's/[,|"| ]//g'`
 export GIT_SHORT_HASH=`git rev-parse — short HEAD`
