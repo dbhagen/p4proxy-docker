@@ -1,4 +1,6 @@
 # P4PROXY-DOCKER
+[![](https://images.microbadger.com/badges/image/dbhagen/p4proxy-docker.svg)](https://microbadger.com/images/dbhagen/p4proxy-docker "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/dbhagen/p4proxy-docker.svg)](https://microbadger.com/images/dbhagen/p4proxy-docker "Get your own version badge on microbadger.com")
 
 ## Minimal setup:
 The minimal set of environment variables to set are:
