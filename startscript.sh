@@ -6,6 +6,8 @@ export P4SSLDIR=/p4/ssl
 export P4PCACHELOCATION=/p4/cache
 export P4TARGET=$P4PTARGET
 mkdir -p $P4PCACHELOCATION
+touch $LOGFILE
+tail -f $LOGFILE &
 printenv >> $LOGFILE
 cp -f /p4/bin/relnotes.txt /p4/config/ 2>&1 >> $LOGFILE
 #cp /cache-clean.sh /p4/config/
