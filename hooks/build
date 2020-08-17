@@ -6,11 +6,7 @@
 #   -t $DOCKER_REPO/$npm_package_name:$npm_package_version \
 #   -t $DOCKER_REPO/$npm_package_name:$npm_package_version-$(date -u '+%Y%m%d-%H%M%S') .
 #yarn build --build-arg VCS_REF=`git rev-parse — short HEAD` --build-arg BUILD_DATE=`date -u +”%Y-%m-%dT%H:%M:%SZ”`
-export npm_package_name=`cat package.json | grep "\"name\"" | cut -d':' -f2 | sed 's/[,|"| ]//g'`
-export npm_package_version=`cat package.json | grep "\"version\"" | cut -d':' -f2 | sed 's/[,|"| ]//g'`
 
 docker build --build-arg VCS_REF=`git rev-parse — short HEAD` \
              --build-arg BUILD_DATE=`date -u +”%Y-%m-%dT%H:%M:%SZ”` \
-             -t $DOCKER_REPO/$npm_package_name:$npm_package_version \
-             -t $DOCKER_REPO/$npm_package_name:$npm_package_version-`date -u '+%Y%m%d-%H%M%S'` \
              -t $IMAGE_NAME .

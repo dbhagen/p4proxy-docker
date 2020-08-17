@@ -6,7 +6,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.name="Helix P4Proxy Container Image" \
+    org.label-schema.name="Helix Perforce P4Proxy Container Image" \
     org.label-schema.description="Docker encapsulated p4proxy instance" \
     org.label-schema.url="https://github.com/dbhagen/p4proxy-docker" \
     org.label-schema.vcs-ref=$VCS_REF \
