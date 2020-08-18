@@ -2,7 +2,6 @@
   "name": "p4proxy-docker",
   "version": "r20.1",
   "description": "Docker encapsulated p4proxy instance",
-  "main": "",
   "author": "Daniel Hagen <daniel.b.hagen@gmail.com>",
   "license": "MIT",
   "scripts": {
