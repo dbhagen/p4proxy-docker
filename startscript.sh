@@ -6,6 +6,7 @@ export P4SSLDIR=/p4/ssl
 export P4PCACHELOCATION=/p4/cache
 export P4TARGET=$P4PTARGET
 mkdir -p $P4PCACHELOCATION
+chmod 0644 $P4SSLDIR
 touch $LOGFILE
 tail -f $LOGFILE &
 printenv >> $LOGFILE
