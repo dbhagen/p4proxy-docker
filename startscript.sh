@@ -10,6 +10,7 @@ tail -f $LOGFILE &
 
 mkdir -p $P4PCACHELOCATION 2>&1 >> $LOGFILE
 whoami 2>&1 >> $LOGFILE
+id 2>&1 >> $LOGFILE
 stat $P4SSLDIR 2>&1 >> $LOGFILE
 ls -latr $P4SSLDIR 2>&1 >> $LOGFILE
 chmod 0644 $P4SSLDIR 2>&1 >> $LOGFILE
