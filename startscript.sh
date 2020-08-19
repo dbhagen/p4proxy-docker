@@ -5,11 +5,14 @@ export LOGFILE=/p4/logs/$P4P_VER-$(date '+%Y-%m-%d-%H-%M-%S').log
 export P4SSLDIR=/p4/ssl
 export P4PCACHELOCATION=/p4/cache
 export P4TARGET=$P4PTARGET
-mkdir -p $P4PCACHELOCATION
-stat $P4SSLDIR
-chmod 0644 $P4SSLDIR
 touch $LOGFILE
 tail -f $LOGFILE &
+
+mkdir -p $P4PCACHELOCATION 2>&1 >> $LOGFILE
+whoami 2>&1 >> $LOGFILE
+stat $P4SSLDIR 2>&1 >> $LOGFILE
+ls -latr $P4SSLDIR 2>&1 >> $LOGFILE
+chmod 0644 $P4SSLDIR 2>&1 >> $LOGFILE
 printenv >> $LOGFILE
 cp -f /p4/bin/relnotes.txt /p4/config/ 2>&1 >> $LOGFILE
 #cp /cache-clean.sh /p4/config/
