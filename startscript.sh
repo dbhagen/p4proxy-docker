@@ -13,7 +13,9 @@ whoami 2>&1 >> $LOGFILE
 id 2>&1 >> $LOGFILE
 stat $P4SSLDIR 2>&1 >> $LOGFILE
 ls -latr $P4SSLDIR 2>&1 >> $LOGFILE
-chmod 0644 $P4SSLDIR 2>&1 >> $LOGFILE
+chown -R `whoami` $P4SSLDIR
+chmod -R 0644 $P4SSLDIR 2>&1 >> $LOGFILE
+stat $P4SSLDIR 2>&1 >> $LOGFILE
 printenv >> $LOGFILE
 cp -f /p4/bin/relnotes.txt /p4/config/ 2>&1 >> $LOGFILE
 #cp /cache-clean.sh /p4/config/
